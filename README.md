@@ -99,6 +99,17 @@ cargo test --all
 # Test evidence: docs/tests.md
 ```
 
+### Install (Jetson)
+
+```bash
+git clone https://github.com/fxd0h/JetsonScope.git
+cd JetsonScope
+cargo build --release --all-features
+sudo ./install.sh            # installs jscoped/jscope/jscopectl and systemd unit
+sudo systemctl enable jscoped
+sudo systemctl start jscoped
+```
+
 ### Telemetry
 
 - Enable periodic health logging (JSONL):
