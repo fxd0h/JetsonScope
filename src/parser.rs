@@ -323,7 +323,7 @@ fn parse_engines(text: &str) -> HashMap<String, EngineStat> {
     }
     // UTIL-only tokens (e.g., NVCSI_UTIL 3%)
     for caps in UTIL_ONLY_RE.captures_iter(text) {
-        let mut name = caps[1].to_string();
+        let name = caps[1].to_string();
         if matches!(name.as_str(), "RAM" | "SWAP" | "IRAM" | "CPU" | "MTS") {
             continue;
         }
