@@ -1,0 +1,9 @@
+target
+.git
+**/vendor
+**/.cargo
+*.tar.gz
+*.log
+*.tmp
+references
+tegrastats_tui_backup

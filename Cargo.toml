@@ -1,0 +1,63 @@
+[package]
+name = "jetsonscope"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.100"
+crossterm = "0.29.0"
+ratatui = "0.29.0"
+regex = "1.12.2"
+once_cell = "1.20.2"
+rand = "0.8"
+chrono = "0.4"
+which = "6"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_cbor = "0.11"
+sysinfo = "0.32"
+tiny_http = "0.12"
+serde_urlencoded = "0.7"
+
+[features]
+default = ["tui", "daemon"]
+daemon = []
+tui = []
+cli = []
+emulator = []
+
+[[bin]]
+name = "jscope"
+path = "src/main.rs"
+required-features = ["tui"]
+
+[[bin]]
+name = "jscoped"
+path = "src/bin/jetsonscoped.rs"
+required-features = ["daemon"]
+
+[[bin]]
+name = "jscopectl"
+path = "src/bin/jetsonscopectl.rs"
+required-features = ["cli"]
+
+# Helper CLI tools mirroring jetson_stats utilities
+[[bin]]
+name = "jetson_scope_release"
+path = "examples/jetson_release.rs"
+
+[[bin]]
+name = "jetson_scope_swap"
+path = "examples/jetson_swap.rs"
+
+[[bin]]
+name = "jetson_scope_env"
+path = "examples/env_vars.rs"
+
+[[bin]]
+name = "jetson_scope_snapshot"
+path = "examples/snapshot.rs"
+
+[[bin]]
+name = "jetson_scope_config"
+path = "src/bin/jetson_scope_config.rs"
