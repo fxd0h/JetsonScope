@@ -20,7 +20,7 @@
 - GPU Engines: `images/gpu_engines.png` (GR3D/EMC/NVENC/DEC/JPG/VIC/OFA/ISP/NVCSI/NVLINK/PCIE/APE gauges).
 - Clocks/Governors: `images/clocks.png` (CPU summary + governor, EMC/MC/AXI, GPU/media engines, controls state).
 
-> TODO: capture real screenshots (demo mode acceptable) and place under `docs/images/`.
+TODO: capture real screenshots (demo mode acceptable) and place under `docs/images/`.
 
 # Controls summary
 - jetson_clocks (on/off/toggle)

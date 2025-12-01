@@ -10,4 +10,4 @@
   - `jetson_scope_env` (env vars)
   - `jetson_scope_snapshot` (one-shot stats to file)
 
-See also: `docs/parity.md` for jtop parity mapping and screenshots (placeholders).
+See also: `docs/parity.md` for jtop parity mapping and screenshots (placeholders until captured).
